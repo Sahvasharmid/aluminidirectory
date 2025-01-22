@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/aluminidirectory/static/css/main.0ee11f7a.css",
+    "main.js": "/aluminidirectory/static/js/main.6a60f719.js",
+    "index.html": "/aluminidirectory/index.html",
+    "main.0ee11f7a.css.map": "/aluminidirectory/static/css/main.0ee11f7a.css.map",
+    "main.6a60f719.js.map": "/aluminidirectory/static/js/main.6a60f719.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0ee11f7a.css",
+    "static/js/main.6a60f719.js"
+  ]
+}
