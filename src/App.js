@@ -22,7 +22,7 @@ const App = () => {
     
        <Routes>
         {/* Define routes for your pages */}
-        <Route path="/client" element={<HomePage />} />
+        <Route exact path="/aluminidirectory" element={<HomePage />} />
         <Route path="/about" element={<AboutPage/>} />
         <Route path='/contact' element={<ContactUs></ContactUs>}></Route>
         <Route path='/membership' element={<MembershipPage></MembershipPage>}></Route>
