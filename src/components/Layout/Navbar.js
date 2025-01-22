@@ -14,10 +14,10 @@ const Navbar = () => {
 
   const navLinks = [
     { id: '/aluminidirectory', text: 'Home' },
-    { id: '/about', text: 'About Us' },
-    { id: '/membership', text: 'Membership' },
+    { id: '/aluminidirectory/about', text: 'About Us' },
+    { id: '/aluminidirectory/membership', text: 'Membership' },
    
-    { id: '/contact', text: 'Contact Us' },
+    { id: '/aluminidirectory/contact', text: 'Contact Us' },
   ];
 
   return (
