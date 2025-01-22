@@ -1,0 +1,7 @@
+@media(max-width:998px){
+    .tableresp{
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+}

@@ -1,0 +1,22 @@
+
+.flexitem ul {
+    list-style: none; /* Remove default bullet points */
+    padding-left: 0; /* Remove any default padding */
+  }
+  
+  .flexitem li {
+    display: flex;
+    align-items: center;
+    padding-left: 30px; /* Space for the tick */
+    position: relative;
+  }
+  
+  .flexitem li::before {
+    content: '✔'; /* Unicode character for a checkmark */
+    font-size: 20px;
+    font-family: 'Font Awesome 5 Free';
+    position: absolute;
+    left: 0; /* Position the tick on the left */
+    color: var(--secondary-color); /* Green color for the tick */
+  }
+ 

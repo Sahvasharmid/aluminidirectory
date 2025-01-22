@@ -1,0 +1,112 @@
+/* styles.module.css */
+
+.input {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background-color: #f0f0f0; /* Light grey background */
+  }
+  
+  .textarea {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background-color: #f0f0f0; /* Light grey background */
+    resize: none;
+  }
+  
+  .container {
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .profilePicture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd;
+  }
+  
+  .profilePictureContainer {
+    position: relative;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--footer-color);
+    border-radius: 30px;
+    padding: 5px;
+  }
+  
+  .changePhotoLabel {
+    display: inline-block;
+    margin-top: 10px; /* Increase the margin to add a gap */
+    font-size: 14px;
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .fileInput {
+    display: none;
+  }
+  
+  .username {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .inputGroup {
+    display: flex;
+    flex-direction: column;
+  
+  }
+  
+  .label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .submitButton {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  @media(max-width:768px){
+    .container {
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+    }
+    .dashboardcontent{
+      display: flex;
+      align-items: center;
+      height: 100vh;
+    }
+    
+  }
+  

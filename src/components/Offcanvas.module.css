@@ -1,0 +1,13 @@
+.offcanvaslink {
+    color: white; /* Default color */
+    text-decoration: none;
+    padding: 0.5rem 1rem; /* Same padding as in your component */
+    display: block;
+    border-radius: 5px; /* Optional, adds a rounded effect */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover */
+  }
+  
+  .offcanvaslink:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle hover background */
+    color: var(--primary-color); /* Theme color */
+  }

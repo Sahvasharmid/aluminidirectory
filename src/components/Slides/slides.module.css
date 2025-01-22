@@ -1,0 +1,29 @@
+/* SlideShow.module.css */
+.carouselImage {
+    width: 100%;
+    height: 100vh; /* Full height of the viewport */
+    object-fit: cover; /* Ensures the entire image is visible */
+    background-color: #000; /* Fallback color for blank areas */
+  }
+  .slide{
+    height: 100vh;
+  }
+  .carouselinner{
+    height: 100vh;
+  }
+  
+  /* Optional: Adjust captions or other elements for smaller screens */
+  @media (max-width: 768px) {
+    .carouselCaption {
+      font-size: 14px; /* Smaller font size for captions */
+    }
+    .carouselImage{
+        height: 50vh;}
+    .slide{
+        height: auto;
+    }
+    .carouselinner{
+        height: fit-content;
+    }
+  }
+  

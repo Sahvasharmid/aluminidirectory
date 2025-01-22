@@ -1,0 +1,13 @@
+.pillinput{
+    border-radius: 50px;
+    border: 1px solid var(--primary-color);
+    background-color: var(--footer-color);
+  color: black;
+    font-size: 14px;
+    padding: 10px;
+
+}
+.pillinput:focus{
+  
+   color: black;
+}

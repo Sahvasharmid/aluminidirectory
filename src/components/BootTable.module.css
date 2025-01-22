@@ -1,0 +1,53 @@
+.photoround {
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Ensure the height matches the width */
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensures the image fits properly without distortion */
+    border: 2px solid #ddd; /* Optional: Add a border for aesthetics */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a slight shadow */
+  }
+  .membercont{
+    padding: 15rem;
+  }
+  /* Update this in your BootTable.module.css */
+.buttoncontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.buttoncontainer .btn {
+  padding: 6px 12px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+  @media (max-width: 768px) {
+    .membercont {
+        padding: 0px;
+    }
+    .paddingcontainer{
+   
+          
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+        
+      }
+      .tableresponsive{
+        overflow-x: scroll;
+        white-space: nowrap;
+      }
+  }
+
+  @media(min-width:992px){
+    .paddingcontainer{
+    padding: 15rem
+    }
+}

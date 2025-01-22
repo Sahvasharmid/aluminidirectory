@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@400;500;600;700&family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+  --primary-color: #323299; /* Main brand color */
+  --secondary-color: #ff9933; /* Secondary color */
+  --primary-color3: #323299;
+  --background-color: #25272B; /* Background color */
+  --text-color: white; /* Default text color */
+  --footer-color: #f4f4f4;
+  --card-color: #353C3C;
+  --offcanvas-width: 230px;
+  --topNavbarHeight: 56px; /* Navbar height */
+}
+
+.sidebar-nav {
+  width: var(--offcanvas-width);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  font-size: 15px;
+}
+
+/* Ensure no gap at the top of the page */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body.modal-open {
+  padding-right: 0 !important;
+}
+
+.modal {
+  z-index: 110000 !important; /* Ensure modal is on top of navbar */
+}
+.modal-backdrop.fade {
+  display: none !important;
+}
+
+@media (min-width: 992px) {
+ 
+
+  .sidebar-nav {
+    position: fixed;
+    transform: none !important;
+    visibility: visible !important;
+    top: var(--topNavbarHeight);
+    height: calc(100% - var(--topNavbarHeight));
+  }
+  
+}
+
+body {
+  overflow: auto !important;
+}

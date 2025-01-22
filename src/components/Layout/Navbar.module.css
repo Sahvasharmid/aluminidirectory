@@ -1,0 +1,50 @@
+
+  
+  
+  /* Styles for the Navbar */
+  .navcontainer{
+    position: fixed;/* Fix the Navbar at the top */
+     top: 0; /* Align it at the top */
+     left: 0;
+     right: 0; /* Ensure it’s on top of other elements */
+     background-color:var(--primary-color);
+     color: var(--text-color)!important;
+     padding: 0px;
+    
+     z-index: 9999;
+     overflow-x: hidden;
+ 
+     
+   }
+ 
+  
+
+   
+   /* Navbar.css */
+   
+   .navbar .navbarbrand {
+     color:var(--text-color) /* Change color for the brand */
+   }
+  
+    .navlink {
+     color:var(--text-color) !important;
+     font-size: 14px;
+     font-weight: 700;
+     transition: color 0.3s ease; /* Smooth transition on hover */
+   }
+   
+    .navlink:hover {
+     color:var(--secondary-color)!important;
+   }
+   .navbarbrand {
+     height: 80px; /* Set a fixed height for the navbar */
+   }
+   
+   .navbarbrand img {
+     height: 100%;          /* Fill the height of the container */
+     width: auto;          /* Maintain aspect ratio */
+     object-fit: contain;  /* Scale the image to maintain its aspect ratio */
+   }
+ /* Add this to your CSS file */
+ 
+ 

@@ -1,0 +1,12 @@
+.admincont{
+    padding: 15rem;
+}
+.paddingcontainer{
+    padding: 15rem
+}
+@media(max-width:768px){
+    .paddingcontainer{
+         overflow-x: scroll;
+         padding: 10px;
+    }
+}

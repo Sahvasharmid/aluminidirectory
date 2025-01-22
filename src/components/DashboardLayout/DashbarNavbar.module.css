@@ -1,0 +1,12 @@
+.navcontainer{
+    position: fixed;/* Fix the Navbar at the top */
+     top: 0; /* Align it at the top */
+     left: 0;
+     right: 0; /* Ensure it’s on top of other elements */
+     color: var(--text-color)!important;
+     padding: 0px;
+    background-color: var(--card-color);
+        overflow-x: hidden;
+ z-index: 998;
+     
+   }
