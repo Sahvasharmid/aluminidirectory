@@ -8,15 +8,12 @@ import { AuthContextProvider } from '../../utils/AuthContext';
 
 const Navbar = () => {
   const {isRegistered, setIsRegistered} =useContext(AuthContextProvider) // Toggle between forms
-  const navigate = useNavigate(); // For navigation after login
 
-  const handleLogin = () => {
-    setIsRegistered(true);
-    navigate('/dashboard');
-  };
+
+ 
 
   const navLinks = [
-    { id: '/', text: 'Home' },
+    { id: '/aluminidirectory', text: 'Home' },
     { id: '/about', text: 'About Us' },
     { id: '/membership', text: 'Membership' },
    
@@ -105,7 +102,7 @@ const Navbar = () => {
           </>
         ) : (
           <>
-            <LoginForm onSubmit={handleLogin} />
+            <LoginForm />
             <div
               className="d-flex"
               style={{ justifyContent: 'center', gap: '10px' }}
