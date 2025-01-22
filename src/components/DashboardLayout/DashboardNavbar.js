@@ -25,7 +25,7 @@ const DashboardNavbar = ({link,profilelink,members}) => {
 
 
         {/* Logo */}
-        <Link to={auth?.user.role=== 'admin' ? '/admindashboard/admin' : '/dashboard/user'} className={`navbar-brand`}>
+        <Link to={auth?.user.role=== 'admin' ? 'aluminidirectory/admindashboard/admin' : 'aluminidirectory/dashboard/user'} className={`navbar-brand`}>
     <img
       src="https://mesalumni.org/wp-content/uploads/2021/09/mesalumni_white@4x.png"
       alt="Logo"

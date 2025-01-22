@@ -38,9 +38,9 @@ const LoginForm = () => {
         axios.defaults.headers.common['Authorization'] = `Bearer ${response.data.token}`;
         const role = response.data.loginresult.role; // Assuming role is part of the response
         if (role === "admin") {
-          navigate("aluminidirectory/admindashboard/admin", { replace: true });
+          navigate("/aluminidirectory/admindashboard/admin", { replace: true });
         } else {
-          navigate("aluminidirectory/dashboard/user", { replace: true });
+          navigate("/aluminidirectory/dashboard/user", { replace: true });
         }
       }
     } catch (error) {
