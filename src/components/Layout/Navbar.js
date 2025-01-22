@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import style from './Navbar.module.css';
 import JoinUsForm from '../Form/JoinUsForm';
 import LoginForm from '../Form/LoginForm';
@@ -25,7 +25,7 @@ const Navbar = () => {
       <nav className={`navbar navbar-expand-lg navbar-light`}>
         <div className={`container-fluid ${style.navcontainer}`}>
           <Link
-            to="#home"
+            to="/aluminidirectory/#home"
             className={`navbar-brand flex-grow-1 ms-lg-5 ${style.navbarbrand} ${style.navbar}`}
           >
             <img
