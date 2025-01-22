@@ -38,7 +38,7 @@ const navigate=useNavigate();
     localStorage.removeItem('auth');
     axios.defaults.headers.common['Authorization'] = '';
     console.log('User logged out');
-    navigate("/aluminidirectory")
+    navigate("/")
     
   };
 

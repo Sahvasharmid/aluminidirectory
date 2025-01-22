@@ -29,7 +29,7 @@ const MembershipPage = () => {
     </div>
     <div className={`col-12 col-lg-6 ${style.flexitem} mb-3`}>
      
-        <img src='/aluminidirectory/images/aboutimg.jpg' style={{width:"100%"}} ></img>
+        <img src='/images/aboutimg.jpg' style={{width:"100%"}} ></img>
         
     </div>
 </div>

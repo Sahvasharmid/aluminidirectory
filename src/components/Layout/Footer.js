@@ -6,10 +6,10 @@ import {FaPhone,FaEnvelope,FaMapMarkerAlt} from 'react-icons/fa'
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa'; 
 const Footer = () => {
   const navLinks = [
-    { name: 'Home', href: '/aluminidirectory/#home' },
-    { name: 'About us', href: '/aluminidirectory/about/#about' },
-    { name: 'aluminibenefits', href: '/aluminidirectory/#join' },
-    { name: 'membership', href: '/aluminidirectory/membership/#membership' },
+    { name: 'Home', href: '/#home' },
+    { name: 'About us', href: '/about/#about' },
+    { name: 'aluminibenefits', href: '/#join' },
+    { name: 'membership', href: '/membership/#membership' },
  
   ];
 
@@ -30,7 +30,7 @@ const Footer = () => {
           <div className="col-12 col-md-3 d-flex flex-column align-items-start mb-4 mb-md-0">
             <div className="sec">
               <div className="image" style={{ height: '50px' }}>
-                <Link to="/aluminidirectory/#home" className={`${style.footerbrand}`}>
+                <Link to="/#home" className={`${style.footerbrand}`}>
                   <img
                     src="https://mesalumni.org/wp-content/uploads/2021/09/New-Image.png"
                     alt="Logo"

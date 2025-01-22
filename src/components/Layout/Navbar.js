@@ -13,11 +13,11 @@ const Navbar = () => {
  
 
   const navLinks = [
-    { id: '/aluminidirectory', text: 'Home' },
-    { id: '/aluminidirectory/about', text: 'About Us' },
-    { id: '/aluminidirectory/membership', text: 'Membership' },
+    { id: '/', text: 'Home' },
+    { id: '/about', text: 'About Us' },
+    { id: '/membership', text: 'Membership' },
    
-    { id: '/aluminidirectory/contact', text: 'Contact Us' },
+    { id: '/contact', text: 'Contact Us' },
   ];
 
   return (
@@ -25,7 +25,7 @@ const Navbar = () => {
       <nav className={`navbar navbar-expand-lg navbar-light`}>
         <div className={`container-fluid ${style.navcontainer}`}>
           <Link
-            to="/aluminidirectory/#home"
+            to="/#home"
             className={`navbar-brand flex-grow-1 ms-lg-5 ${style.navbarbrand} ${style.navbar}`}
           >
             <img

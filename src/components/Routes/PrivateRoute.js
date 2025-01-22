@@ -31,7 +31,7 @@ function PrivateRouter() {
     return <div>Loading...</div>;
   }
 
-  return ok ? <Outlet /> : <Navigate to="/aluminidirectory" replace />;
+  return ok ? <Outlet /> : <Navigate to="/" replace />;
 }
 
 export default PrivateRouter;

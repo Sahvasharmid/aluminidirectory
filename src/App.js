@@ -1,4 +1,4 @@
-import { BrowserRouter as Router ,Routes,Route} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import HomePage from './Pages/HomePage';
 import AboutPage from './Pages/AboutPage';
@@ -19,26 +19,28 @@ import ProfileUpdateForm from './Pages/User/Profile';
 
 const App = () => {
   return (
-    <Routes>
-    <Route exact path="/aluminidirectory" element={<HomePage />} />
-    <Route path="/aluminidirectory/about" element={<AboutPage />} />
-    <Route path="/aluminidirectory/contact" element={<ContactUs />} />
-    <Route path="/aluminidirectory/membership" element={<MembershipPage />} />
-    <Route path="/aluminidirectory/login" element={<LoginForm />} />
-    <Route path="/aluminidirectory/dashboard" element={<PrivateRouter />}>
-      <Route path="user" element={<DashboardUser />} />
-      <Route path="user/events" element={<EventList />} />
-      <Route path="user/course" element={<CourseList />} />
-      <Route path="user/profile" element={<Profile />} />
-      <Route path="user/members" element={<MemberList />} />
-    </Route>
-    <Route path="/aluminidirectory/admindashboard" element={<AdminRoute />}>
-      <Route path="admin" element={<AdminDashboard />} />
-      <Route path="admin/members" element={<AdminMemberList />} />
-      <Route path="admin/profile" element={<ProfileUpdateForm />} />
-    </Route>
-  </Routes>
-   
+    
+      <Routes>
+        <Route exact path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactUs />} />
+        <Route path="/membership" element={<MembershipPage />} />
+        <Route path="/login" element={<LoginForm />} />
+        <Route path="/dashboard" element={<PrivateRouter />}>
+          <Route path="user" element={<DashboardUser />} />
+          <Route path="user/events" element={<EventList />} />
+          <Route path="user/course" element={<CourseList />} />
+          <Route path="user/profile" element={<Profile />} />
+          <Route path="user/members" element={<MemberList />} />
+        </Route>
+        <Route path="/admindashboard" element={<AdminRoute />}>
+          <Route path="admin" element={<AdminDashboard />} />
+          <Route path="admin/members" element={<AdminMemberList />} />
+          <Route path="admin/profile" element={<ProfileUpdateForm />} />
+        </Route>
+      </Routes>
+
   );
 };
+
 export default App;
