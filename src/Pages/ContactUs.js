@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout/Layout'
 import { useState } from 'react';
+import style from './ContactUs.module.css'
 const ContactUs = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -29,7 +30,7 @@ const ContactUs = () => {
         <div className='container'>
         
 
-    <div className="container my-4" style={{width:"50%"}}>
+    <div className={`container my-4 ${style.container}`}>
       <h2 className="text-center mb-4">Contact Us</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
