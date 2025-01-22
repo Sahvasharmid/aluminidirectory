@@ -4,7 +4,7 @@ import SocialLinkIcon from '../components/SocialLinks/SocialLinks'
 import SlideShow from '../components/Slides/slides'
 import style from './HomePage.module.css'
 import Layout from '../components/Layout/Layout'
-import AluminiFeatures from '../components/AluminiFeatures';
+
 const alumniFeatures = [
   { title: "Develop Connections", description: "Building a network of other Alumnus increases your connections. MES Alumni is not only a great way to mingle and enjoy yourself, but it’s also the perfect opportunity to expand your professional connections and meet new people." },
   { title: "Give Back", description: "Joining the alumni association is the easiest way to give back to your school by joining hands with our CSR activities and student outreach programs" },
