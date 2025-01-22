@@ -16,7 +16,7 @@ const Navbar = () => {
   };
 
   const navLinks = [
-    { id: '/', text: 'Home' },
+    { id: '/aluminidirectory', text: 'Home' },
     { id: '/about', text: 'About Us' },
     { id: '/membership', text: 'Membership' },
    
