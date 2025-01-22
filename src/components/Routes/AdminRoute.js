@@ -32,7 +32,7 @@ function AdminRoute() {
     return <div>Loading...</div>;
   }
 
-  return ok ? <Outlet /> : <Navigate to="/" replace />;
+  return ok ? <Outlet /> : <Navigate to="/aluminidirectory" replace />;
 }
 
 export default AdminRoute;
