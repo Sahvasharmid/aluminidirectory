@@ -5,15 +5,15 @@ const DashboardLayout = ({ children }) => {
   const { auth } = useContext(AuthContextProvider);
 
   const userLinks = {
-    link: '/dashboard/user',
-    profilelink: '/dashboard/user/profile',
-    members: '/dashboard/user/members',
+    link: '/aluminidirectory/dashboard/user',
+    profilelink: '/aluminidirectory/dashboard/user/profile',
+    members: '/aluminidirectory/dashboard/user/members',
   };
 
   const adminLinks = {
-    link: '/admindashboard/admin',
-    profilelink: '/admindashboard/admin/profile',
-    members: '/admindashboard/admin/members',
+    link: '/aluminidirectory/admindashboard/admin',
+    profilelink: '/aluminidirectory/admindashboard/admin/profile',
+    members: '/aluminidirectory/admindashboard/admin/members',
   };
 
   // Choose links based on user role
