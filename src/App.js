@@ -19,28 +19,25 @@ import ProfileUpdateForm from './Pages/User/Profile';
 
 const App = () => {
   return (
-    
-       <Routes>
-        {/* Define routes for your pages */}
-        <Route exact path="/aluminidirectory" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage/>} />
-        <Route path='/contact' element={<ContactUs></ContactUs>}></Route>
-        <Route path='/membership' element={<MembershipPage></MembershipPage>}></Route>
-        <Route path='/login' element={<LoginForm></LoginForm>}></Route>
-        <Route path='/dashboard' element={<PrivateRouter></PrivateRouter>}>
-       <Route path="user" element={<DashboardUser></DashboardUser>}></Route>
-    <Route path="user/events" element={<EventList></EventList>}></Route>
-    <Route path='user/course' element={<CourseList></CourseList>}></Route>
-<Route path="user/profile" element={<Profile></Profile>}></Route>
-<Route path='user/members' element={<MemberList></MemberList>}></Route>
-
-          </Route>
-          <Route path="/admindashboard" element={<AdminRoute />}>
-                    <Route path='admin' element={<AdminDashboard></AdminDashboard>}></Route>
-                    <Route path='admin/members' element={<AdminMemberList></AdminMemberList>}></Route>
-                    <Route path='admin/profile' element={<ProfileUpdateForm></ProfileUpdateForm>}></Route>
-                </Route>
-      </Routes>
+    <Routes>
+    <Route exact path="/aluminidirectory" element={<HomePage />} />
+    <Route path="/aluminidirectory/about" element={<AboutPage />} />
+    <Route path="/aluminidirectory/contact" element={<ContactUs />} />
+    <Route path="/aluminidirectory/membership" element={<MembershipPage />} />
+    <Route path="/aluminidirectory/login" element={<LoginForm />} />
+    <Route path="/aluminidirectory/dashboard" element={<PrivateRouter />}>
+      <Route path="user" element={<DashboardUser />} />
+      <Route path="user/events" element={<EventList />} />
+      <Route path="user/course" element={<CourseList />} />
+      <Route path="user/profile" element={<Profile />} />
+      <Route path="user/members" element={<MemberList />} />
+    </Route>
+    <Route path="/aluminidirectory/admindashboard" element={<AdminRoute />}>
+      <Route path="admin" element={<AdminDashboard />} />
+      <Route path="admin/members" element={<AdminMemberList />} />
+      <Route path="admin/profile" element={<ProfileUpdateForm />} />
+    </Route>
+  </Routes>
    
   );
 };
