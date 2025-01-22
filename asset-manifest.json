@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/aluminidirectory/static/css/main.0ee11f7a.css",
-    "main.js": "/aluminidirectory/static/js/main.5eecdbd8.js",
+    "main.js": "/aluminidirectory/static/js/main.7a604281.js",
     "index.html": "/aluminidirectory/index.html",
     "main.0ee11f7a.css.map": "/aluminidirectory/static/css/main.0ee11f7a.css.map",
-    "main.5eecdbd8.js.map": "/aluminidirectory/static/js/main.5eecdbd8.js.map"
+    "main.7a604281.js.map": "/aluminidirectory/static/js/main.7a604281.js.map"
   },
   "entrypoints": [
     "static/css/main.0ee11f7a.css",
-    "static/js/main.5eecdbd8.js"
+    "static/js/main.7a604281.js"
   ]
 }
