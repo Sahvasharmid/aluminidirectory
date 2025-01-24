@@ -25,7 +25,7 @@ const HomePage = () => {
        
           <p className='text-center'>MES Alumni Association was formed with a clear mandate to reunite former students of MES Indian School from all over the world. The students who graduated from the school over the years have gone to have distinguished careers in various fields around the globe working for world-class organizations, entrepreneurship, engaging with different community, or continuing their learning journey through further studies. The school takes great pride in their achievements and their progress through life and it is this in mind that the school continues its association with its former students.</p>
          </div>
-          <div className='container-fluid p-0' style={{backgroundImage:`url(/images/alumni.jpeg)`,height:"70vh",backgroundPosition:"top center",backgroundRepeat:"no-repeat",backgroundSize:"cover"}}>
+          <div className='container-fluid p-0' style={{backgroundImage:`url(/aluminidirectory/images/alumni.jpeg)`,height:"70vh",backgroundPosition:"top center",backgroundRepeat:"no-repeat",backgroundSize:"cover"}}>
 
           </div>
           <div className='container pt-3' id="join">

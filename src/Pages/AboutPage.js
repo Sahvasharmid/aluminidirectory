@@ -21,7 +21,7 @@ MES Alumni, as it is now called, aims to serve as a common platform to re-ignite
 MES Alumni Association was formed with a clear mandate to reunite former students of MES Indian School from all over the world. The students who graduated from the school over the years have gone to have distinguished careers in various fields around the globe working for world-class organisations, entrepreneurship, engaging with different community, or continuing their learning journey through further studies. The school takes great pride in their achievements and their progress through life and it is this in mind that the school continues its association with its former students.</p>
         </div>
         <div className="col-12 col-lg-6">
-<img src="/images/aboutimg.jpg" style={{width: "100%"}} alt="About" />
+<img src="/aluminidirectory/images/aboutimg.jpg" style={{width: "100%"}} alt="About" />
 </div>
         </div>
         </div>
