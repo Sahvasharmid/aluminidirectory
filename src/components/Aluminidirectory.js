@@ -3,6 +3,7 @@ import axios from 'axios';
 import { AuthContextProvider } from '../utils/AuthContext'; // Adjust the import path if necessary
 import style from './BootTable.module.css'
 import AdminModal from './Modal/AdminModal';
+import AluminiCard from './card/AluminiCard';
 const AlumniDirectory = () => {
   const { auth } = useContext(AuthContextProvider);
   const [members, setMembers] = useState([]);
@@ -20,6 +21,17 @@ const AlumniDirectory = () => {
   const startIndex = page * rowsPerPage;
   const endIndex = startIndex + rowsPerPage;
   const currentMembers = filteredMembers.slice(startIndex, endIndex);
+  const cardColors = [
+    "#98d8eb", 
+    "#a6b9ec" ,
+   " #a3d0e7",
+   "#73fed5",
+    "#fec6e3",
+     "#fed7ae"
+  ];
+
+
+  
   // Fetch members from the API
   useEffect(() => {
     const apiUrl =
@@ -171,6 +183,7 @@ const AlumniDirectory = () => {
   return (
     
       <div className={`container pt-5 ${style.paddingcontainer}`}> 
+
       <h4 className="py-3 text-center">Members List</h4>
       <hr />
 
@@ -180,7 +193,7 @@ const AlumniDirectory = () => {
           <input
             type="text"
             className="form-control"
-            placeholder="Search by Name, Qualification"
+            placeholder="Search by Name or Qualification"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value || '')}
           />
@@ -210,87 +223,93 @@ const AlumniDirectory = () => {
       </div>
       </div>
       {loading ? (
-        <div className='text-center'>Loading...</div>
-      ) :
-    (<>
-        
-      {/* Table of Alumni */}
-      <div className={` ${style.tableresponsive}`}>
-      <table className="table table-hover">
-        <thead>
-          <tr>
-         
-            <th>photo</th>
-            <th>Name</th>
-            <th>qualification</th>
-            <th>Year</th>
-            <th>phoneno</th>
-            <th>address</th>
-            {auth?.user.role==="admin" && <th>verify</th>} 
-            {/* New column for verified status */}
-            {auth?.user.role==="admin" && <th>Actions</th>} 
-          </tr>
-        </thead>
-        <tbody>
-        {currentMembers.length > 0 ? (
-            currentMembers.map((member) => (
-              <tr key={member._id}>
-            
-                <td>
+      <div className="text-center">
+        <div className="spinner-border text-primary" role="status">
+          <span className="sr-only">Loading...</span>
+        </div>
+        <p>Loading members...</p>
+      </div>
+    ) : (
+      <>
+     {auth?.user.role === "admin" ? (
+        <>
+          {/* Admin Table View */}
+          <div className={` ${style.tableresponsive}`}>
+            <table className="table table-hover">
+              <thead>
+                <tr>
+                  <th>Photo</th>
+                  <th>Name</th>
+                  <th>Qualification</th>
+                  <th>Year</th>
+                  <th>Phone No</th>
+                  <th>Address</th>
+                  <th>Actions</th>
+                  <th>Verify</th>
+                 
+                </tr>
+              </thead>
+              <tbody>
+                {currentMembers.length > 0 ? (
+                  currentMembers.map((member) => (
+                    <tr key={member._id}>
+                      <td>
+                        <img
+                          src={`https://aluminidirectorybackend.onrender.com/members/photo/${member._id}`}
+                          className={style.photoround}
+                          alt="Member"
+                          
+                        />
+                      </td>
+                      <td>{member.name}</td>
+                      <td>{member.qualification}</td>
+                      <td>{member.passoutyear}</td>
+                      <td>{member.phoneno}</td>
+                      <td>{member.address}</td>
+                    
+                      <td>
+                        <button
+                          className={`btn ${member.isVerified ? 'btn-success' : 'btn-warning'}`}
+                          onClick={() => handleVerificationToggle(member._id, !member.isVerified)}
+                        >
+                          {member.isVerified ? 'Verified' : 'Unverified'}
+                        </button>
+                      </td>
+                      <td>
 
-                  <img
-                    src={`https://aluminidirectorybackend.onrender.com/members/photo/${member._id}`}
-                    className={style.photoround}
-                    alt="Member"
-                  />
-                </td>
-                <td>{member.name}</td>
-                <td>{member.qualification}</td>
-                <td>{member.passoutyear}</td>
-                <td>{member.phoneno}</td>
-            <td>{member.address}</td>
-
-                {auth?.user.role==="admin" &&
-                <td>
-                  {/* Verify/Unverify button */}
-                  <button
-                    className={`btn ${member.isVerified ? 'btn-success' : 'btn-warning'}`}
-                    onClick={() => handleVerificationToggle(member._id, !member.isVerified)}
-                  >
-                    {member.isVerified ? 'Verified' : 'Unverified'}
-                  </button>
-                </td>}
-                {auth?.user.role==="admin" && (  // Only show Edit and Delete buttons for admin
-                  <td style={{display:"flex",justifyContent:"center",alignItems:"center",padding:"18px",gap:"10px"}}>
-                    <button
-                      className="btn btn-info btn-sm mr-2"
-                      onClick={() => handleEditAlumni(member._id)}
-                    >
-                      Edit
-                    </button>
-                    <button
-                      className="btn btn-danger btn-sm"
-                      onClick={() => handleDeleteAlumni(member._id)}
-                    >
-                      Delete
-                    </button>
-                  </td>
+<button
+  className="btn btn-info btn-sm"
+  onClick={() => handleEditAlumni(member._id)}
+  style={{marginRight:"5px",padding:"8px 20px"}}
+>
+  Edit
+</button>
+<button
+  className="btn btn-danger btn-sm"
+  onClick={() => handleDeleteAlumni(member._id)}
+  style={{marginRight:"5px",padding:"8px 20px"}}
+>
+  Delete
+</button>
+</td>
+                    </tr>
+                  ))
+                ) : (
+                  <tr>
+                    <td colSpan="8" className="text-center">
+                      No results found
+                    </td>
+                  </tr>
                 )}
-              </tr>
-            )))
-            : (
-          <tr>
-            <td colSpan="7" className="text-center">
-              No results found
-            </td>
-          </tr>
-         ) }
-          </tbody>
-       
-      </table>
+              </tbody>
+            </table>
+          </div>
+        </>
+      ) : (
+        <AluminiCard  cardColors={cardColors} currentMembers={currentMembers} ></AluminiCard>
+        )}
       
-</div>
-</>)}
+      </>)}
       {/* Pagination */}
       <div className="d-flex justify-content-between align-items-center mt-3">
         <div>

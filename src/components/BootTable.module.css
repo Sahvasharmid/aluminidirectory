@@ -48,6 +48,8 @@
 
   @media(min-width:992px){
     .paddingcontainer{
-    padding: 15rem
+    padding-left: 15rem;
+    border: "1px solid red";
+    width: 100%;
     }
 }

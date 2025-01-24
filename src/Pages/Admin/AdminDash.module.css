@@ -2,7 +2,8 @@
     padding: 15rem;
 }
 .paddingcontainer{
-    padding: 15rem
+    padding-left: 15rem;
+    
 }
 @media(max-width:768px){
     .paddingcontainer{

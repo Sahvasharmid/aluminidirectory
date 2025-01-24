@@ -20,7 +20,7 @@
    /* Optional: Background color */
   }
   .paddingcontainer{
-    padding: 15rem
+    padding-left: 15rem
   }
   
   @media(max-width:768px){

@@ -32,7 +32,7 @@ const DashboardUser = () => {
         },
         {
           title: "Recent News",
-          content: "Will post later, currently unavailable",
+          content: " Browse trending jobs and enhance your skills,Will post later, currently unavailable",
         },
         {
           title: "Notable Achievements",
@@ -45,12 +45,12 @@ const DashboardUser = () => {
   }, []);
 
   const cardColors = [
-    "#FFD700", // Gold
-    "#FF5733", // Red
-    "#28B463", // Green
-    "#5DADE2", // Blue
-    "#AF7AC5", // Purple
-    "#F39C12", // Orange
+    "#FFD700", 
+    "#FF5733", 
+    "#28B463",
+    "#5DADE2", 
+    "#AF7AC5", 
+    "#F39C12", 
   ];
 
   return (
