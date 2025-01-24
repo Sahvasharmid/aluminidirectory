@@ -10,6 +10,8 @@ const CourseManagement = () => {
   const [showModal, setShowModal] = useState(false);
   const [editMode, setEditMode] = useState(false);
 
+  const headers = ['#', 'Course Name', 'Description', 'Duration', 'Instructor', 'Actions'];
+
   // Fetch courses
   useEffect(() => {
     const fetchCourses = async () => {
@@ -177,12 +179,11 @@ const CourseManagement = () => {
           <table className="table table-hover">
             <thead>
               <tr>
-                <th>#</th>
-                <th>Course Name</th>
-                <th>Description</th>
-                <th>Duration</th>
-                <th>Instructor</th>
-                <th>Actions</th>
+              
+            {headers.map((header, index) => (
+              <th key={index}>{header}</th>
+            ))}
+          
               </tr>
             </thead>
             <tbody>

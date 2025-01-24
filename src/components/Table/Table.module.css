@@ -40,7 +40,10 @@
           width: 100%;
         
       }
-    
+      .tableresponsive{
+        overflow-x: scroll;
+        white-space: nowrap;
+      }
   }
 
   @media(min-width:992px){

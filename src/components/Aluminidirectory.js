@@ -4,6 +4,8 @@ import { AuthContextProvider } from '../utils/AuthContext'; // Adjust the import
 import style from './BootTable.module.css'
 import AdminModal from './Modal/AdminModal';
 import AluminiCard from './card/AluminiCard';
+import Pagination from './Pagination/Pagination';
+import AdminTable from './Table/AdminTable';
 const AlumniDirectory = () => {
   const { auth } = useContext(AuthContextProvider);
   const [members, setMembers] = useState([]);
@@ -234,76 +236,8 @@ const AlumniDirectory = () => {
      {auth?.user.role === "admin" ? (
         <>
           {/* Admin Table View */}
-          <div className={` ${style.tableresponsive}`}>
-            <table className="table table-hover">
-              <thead>
-                <tr>
-                  <th>Photo</th>
-                  <th>Name</th>
-                  <th>Qualification</th>
-                  <th>Year</th>
-                  <th>Phone No</th>
-                  <th>Address</th>
-                  <th>Actions</th>
-                  <th>Verify</th>
-                 
-                </tr>
-              </thead>
-              <tbody>
-                {currentMembers.length > 0 ? (
-                  currentMembers.map((member) => (
-                    <tr key={member._id}>
-                      <td>
-                        <img
-                          src={`https://aluminidirectorybackend.onrender.com/members/photo/${member._id}`}
-                          className={style.photoround}
-                          alt="Member"
-                          
-                        />
-                      </td>
-                      <td>{member.name}</td>
-                      <td>{member.qualification}</td>
-                      <td>{member.passoutyear}</td>
-                      <td>{member.phoneno}</td>
-                      <td>{member.address}</td>
-                    
-                      <td>
-                        <button
-                          className={`btn ${member.isVerified ? 'btn-success' : 'btn-warning'}`}
-                          onClick={() => handleVerificationToggle(member._id, !member.isVerified)}
-                        >
-                          {member.isVerified ? 'Verified' : 'Unverified'}
-                        </button>
-                      </td>
-                      <td>
-
-<button
-  className="btn btn-info btn-sm"
-  onClick={() => handleEditAlumni(member._id)}
-  style={{marginRight:"5px",padding:"8px 20px"}}
->
-  Edit
-</button>
-<button
-  className="btn btn-danger btn-sm"
-  onClick={() => handleDeleteAlumni(member._id)}
-  style={{marginRight:"5px",padding:"8px 20px"}}
->
-  Delete
-</button>
-</td>
-                    </tr>
-                  ))
-                ) : (
-                  <tr>
-                    <td colSpan="8" className="text-center">
-                      No results found
-                    </td>
-                  </tr>
-                )}
-              </tbody>
-            </table>
-          </div>
+         
+          <AdminTable handleDeleteAlumni={handleDeleteAlumni} handleEditAlumni={handleEditAlumni} handleVerificationToggle={handleVerificationToggle}  currentMembers={currentMembers}></AdminTable>
         </>
       ) : (
         <AluminiCard  cardColors={cardColors} currentMembers={currentMembers} ></AluminiCard>
@@ -311,39 +245,7 @@ const AlumniDirectory = () => {
       
       </>)}
       {/* Pagination */}
-      <div className="d-flex justify-content-between align-items-center mt-3">
-        <div>
-          <label>
-            Rows per page:
-            <select
-              className="form-control d-inline-block w-auto ml-2"
-              value={rowsPerPage}
-              onChange={handleChangeRowsPerPage}
-            >
-              <option value={10}>10</option>
-              <option value={25}>25</option>
-              <option value={100}>100</option>
-            </select>
-          </label>
-        </div>
-        <div>
-          <button
-            className="btn btn-secondary btn-sm mr-2"
-            disabled={page === 0}
-            onClick={() => handleChangePage(page - 1)}
-          >
-            Previous
-          </button>
-          <span>Page {page + 1}</span>
-          <button
-            className="btn btn-secondary btn-sm ml-2"
-            disabled={endIndex >= filteredMembers.length}
-            onClick={() => handleChangePage(page + 1)}
-          >
-            Next
-          </button>
-        </div>
-      </div>
+     <Pagination filteredMembers={filteredMembers} handleChangePage={handleChangePage} handleChangeRowsPerPage={handleChangeRowsPerPage} endIndex={endIndex} page={page} rowsPerPage={rowsPerPage}></Pagination>
       {/* Add or Edit Alumni Modal */}
       {showModal &&
       <AdminModal editAlumni={editAlumni} setShowModal={setShowModal}  newAlumni={newAlumni} handleSaveEdit={handleSaveEdit} handleEditAlumni={handleEditAlumni} setEditAlumni={setEditAlumni} setNewAlumni={setNewAlumni}></AdminModal>

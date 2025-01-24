@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import style from './CreateEvent.module.css'
+import EventTable from "../../components/Table/EventTable";
 const EventManagement = () => {
   const [events, setEvents] = useState([]);
   const [newEvent, setNewEvent] = useState({ title: "", description: "", location: "" });
@@ -168,35 +169,7 @@ const EventManagement = () => {
       <div className="container mt-5">
   <h3>Event List</h3>
    <div className={`table-responsive ${style.tableresp}`}>
-  <table className="table table-hover">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Title</th>
-        <th scope="col">Description</th>
-        <th scope="col">Location</th>
-        <th scope="col">Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      {events.map((event, index) => (
-        <tr key={event._id}>
-          <th scope="row">{index + 1}</th>
-          <td>{event.title}</td>
-          <td>{event.description}</td>
-          <td>{event.location}</td>
-          <td style={{display:"flex"}}>
-            <button className="btn btn-warning btn-sm" onClick={() => handleEditEvent(event)}>
-              Edit
-            </button>
-            <button className="btn btn-danger btn-sm ms-2" onClick={() => handleDeleteEvent(event._id)}>
-              Delete
-            </button>
-          </td>
-        </tr>
-      ))}
-    </tbody>
-  </table>
+ <EventTable handleDeleteEvent={handleDeleteEvent} handleEditEvent={handleEditEvent} events={events}></EventTable>
   </div>
 </div>
 
